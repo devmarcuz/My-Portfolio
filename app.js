@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
     //   location of the react app connecting to
-    origin: "http://localhost:3000",
+    origin: "https://resumedemoapp.herokuapp.com",
     credentials: true,
   })
 );
