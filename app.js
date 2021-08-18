@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-const path = require("path")
+const path = require("path");
+require("dotenv").config({});
 
 const app = express();
 
@@ -28,4 +29,4 @@ app.post("/request", async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+app.listen(process.env.PORT, () => console.log("Server running on port 5000"));
