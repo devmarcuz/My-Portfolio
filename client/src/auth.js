@@ -7,7 +7,7 @@ export const request = async (data) => {
     },
   };
 
-  const res = await axios.post("http://localhost:5000/request", data, config);
+  const res = await axios.post("/request", data, config);
 
   return res;
 };
