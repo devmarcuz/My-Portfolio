@@ -43,98 +43,104 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <header>
-        <h1>
-          <span className="acme">HNG </span>Internship
-        </h1>
-      </header>
-      <main>
-        <section className="header">
-          <div className="logo">
-            <img src="/images/HNG.png" alt="HNG" />
-            <h3>HNG Internship</h3>
-          </div>
-          <ul className="persona">
-            <li>
-              <FaTwitter className="icon" />
-              <p>@hnginternship</p>
-            </li>
-            <li>
-              <FaEnvelope className="icon" />
-              <p>hello@hng.tech</p>
-            </li>
-            <li>
-              <FaAddressCard className="icon" />
-              <p>
-                3 Birrel Avenue, Sabo.
-                <br /> Yaba, Lagos State,
-                <br /> Nigeria
-              </p>
-            </li>
-          </ul>
-        </section>
-        <section className="form">
-          <form method="POST" onSubmit={onSubmit}>
-            <h4>Email Us</h4>
+        <div className="container">
+          <header>
+            <h1>
+              <a href="https://hng.tech">
+                <span className="acme">HNG </span>Internship
+              </a>
+            </h1>
+          </header>
+          <main>
+            <section className="header">
+              <div className="logo">
+                <a href="https://hng.tech">
+                  <img src="/images/HNG.png" alt="HNG" />
+                  <h3>HNG Internship</h3>
+                </a>
+              </div>
+              <ul className="persona">
+                <li>
+                  <FaTwitter className="icon" />
+                  <p>@hnginternship</p>
+                </li>
+                <li>
+                  <FaEnvelope className="icon" />
+                  <p>hello@hng.tech</p>
+                </li>
+                <li>
+                  <FaAddressCard className="icon" />
+                  <p>
+                    3 Birrel Avenue, Sabo.
+                    <br /> Yaba, Lagos State,
+                    <br /> Nigeria
+                  </p>
+                </li>
+              </ul>
+            </section>
+            <section className="form">
+              <form method="POST" onSubmit={onSubmit}>
+                <h4>Email Us</h4>
 
-            <div className="field">
-              <div className="label">
-                <label htmlFor="name">Full Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Enter full name"
-                  value={name}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="label">
-                <label htmlFor="company">Desire Job Title</label>
-                <input
-                  type="text"
-                  name="job"
-                  placeholder="Enter desired job title here"
-                  value={job}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="label">
-                <label htmlFor="email">Email Address</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter email address"
-                  value={email}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="label">
-                <label htmlFor="city">City</label>
-                <input
-                  type="text"
-                  name="city"
-                  placeholder="Enter city"
-                  value={city}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-            <div className="label-link">
-              <label htmlFor="phone">Submission Link (Link to Resume)</label>
-              <input
-                type="text"
-                name="link"
-                placeholder="Enter submission link"
-                value={link}
-                onChange={handleChange}
-              />
-            </div>
-            <button type="submit">SUBMIT</button>
-          </form>
-        </section>
-      </main>
-    </div>
+                <div className="field">
+                  <div className="label">
+                    <label htmlFor="name">Full Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter full name"
+                      value={name}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="label">
+                    <label htmlFor="company">Desire Job Title</label>
+                    <input
+                      type="text"
+                      name="job"
+                      placeholder="Enter desired job title here"
+                      value={job}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="label">
+                    <label htmlFor="email">Email Address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter email address"
+                      value={email}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="label">
+                    <label htmlFor="city">City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="Enter city"
+                      value={city}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="label-link">
+                  <label htmlFor="phone">
+                    Submission Link (Link to Resume)
+                  </label>
+                  <input
+                    type="text"
+                    name="link"
+                    placeholder="Enter submission link"
+                    value={link}
+                    onChange={handleChange}
+                  />
+                </div>
+                <button type="submit">SUBMIT</button>
+              </form>
+            </section>
+          </main>
+        </div>
   );
 }
 
