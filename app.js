@@ -23,7 +23,7 @@ app.get("*", (req, res) =>
 app.post("/request", async (req, res) => {
   try {
     const user = req.body;
-    res.status(200).json({ user });
+    return res.status(200).json({ user, success: "Email has been sent" });
   } catch (err) {
     res.status(400).json({ error: "Server error" });
   }
