@@ -6,7 +6,7 @@ const Footer = () => {
       <h2>Otunba Marcus</h2>
       <p>Web Developer & Mobile Application Developer</p>
       <a href="https://hng.tech">
-        <img src="/images/HNG.png" alt="" />
+        <img src="https://hng.tech/img/brand-logo.png" alt="" />
       </a>
     </footer>
   );

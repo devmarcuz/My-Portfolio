@@ -4,7 +4,6 @@ import {
   FaFacebook,
   FaLinkedin,
   FaInstagram,
-  FaArrowRight,
 } from "react-icons/fa";
 
 const MainHeader = () => {
@@ -39,10 +38,6 @@ const MainHeader = () => {
             <FaLinkedin />
           </a>
         </div>
-        <button>
-          <p>Get In Touch</p>
-          <FaArrowRight style={{ marginLeft: "10px" }} />
-        </button>
       </div>
       <img src="/images/wave-bg.svg" alt="" className="wave" />
     </div>
