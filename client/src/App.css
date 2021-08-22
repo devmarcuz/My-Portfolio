@@ -8,7 +8,37 @@
 .container {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  overflow-y: scroll;
+}
+
+/**
+ * Enable smooth scrolling on the whole document
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/**
+ * Add .section to every anchored element for scroll margin
+ */
+section {
+  scroll-margin-top: 2rem;
+}
+
+.smooth {
+  background-color: red;
+  width: 100px;
+  height: 100px;
 }
 
 .header {
@@ -19,6 +49,15 @@
   padding: 0 120px;
   line-height: 12vh;
   background-color: #f4f6f8;
+}
+
+.header-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.514);
+  line-height: 10vh;
+  z-index: 1000;
 }
 
 ul {
@@ -154,7 +193,7 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 20px;
+  padding: 20px 50px;
 }
 
 .intro h3 {
@@ -208,7 +247,7 @@ ul {
 
 section {
   width: 100%;
-  padding: 50px 20px;
+  padding: 50px 50px;
 }
 .service {
   width: 100%;
@@ -394,6 +433,10 @@ a {
   transform: translateY(-16%);
 }
 
+.contact {
+  margin-top: 50px;
+}
+
 .contact .form {
   display: flex;
   justify-content: space-between;
@@ -424,6 +467,7 @@ a {
 textarea {
   margin-top: 10px;
   padding: 10px;
+  border: none;
 }
 
 .contact .form form button {
@@ -475,6 +519,10 @@ footer {
   padding-bottom: 20px;
 }
 
+footer p {
+  text-align: center;
+}
+
 footer img {
   width: 200px;
   height: 100px;
@@ -488,9 +536,75 @@ footer img {
   display: none;
 }
 
+.resume .content {
+  padding-top: 20px;
+}
+
+.resume .content .timeline-area {
+  border-left: 2px solid rgb(233, 229, 0);
+  padding: 0 20px 0 30px;
+  font-size: 15px;
+}
+
+.resume .content .title {
+  font-size: 22px;
+  padding-bottom: 15px;
+}
+
+.resume .content .timeline-area .card {
+  background-color: white;
+  padding: 0px 25px;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: center; */
+}
+
+.resume .content .timeline-area .card h2 {
+  font-size: 19px;
+  color: rgb(206, 202, 4);
+}
+
+.resume .content .timeline-area .card i {
+  color: rgb(26, 26, 26);
+  margin-top: 10px;
+}
+
+.resume .content .timeline-area .card .level {
+  color: rgb(26, 26, 26);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.resume .content .timeline-area .card .date {
+  background-color: rgb(245, 245, 245);
+  padding: 5px 10px;
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+.resume .content .timeline-area .card::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 3px solid rgb(233, 229, 0);
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  background-color: rgb(255, 255, 255);
+}
+
 @media only screen and (max-width: 1050px) {
   .bars {
     display: inherit;
+  }
+
+  .header {
+    line-height: 9vh;
   }
 
   .header {
@@ -578,6 +692,10 @@ footer img {
     width: 100%;
   }
 
+  .skill .skill-level .level-flex .level:nth-of-type(2) {
+    margin-top: 15px;
+  }
+
   .skill .skill-level .level-flex .level:first-child {
     margin-right: 0;
   }
@@ -590,6 +708,10 @@ footer img {
   .contact .form form {
     width: 100%;
     margin-bottom: 15px;
+  }
+
+  section {
+    padding: 50px 20px;
   }
 }
 
@@ -612,5 +734,49 @@ footer img {
 
   .offer {
     width: 90%;
+  }
+
+  .resume .content .timeline-area .card h2 {
+    font-size: 17px;
+  }
+
+  .intro .img {
+    height: 250px;
+    width: 270px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .resume .content .timeline-area .card h2 {
+    font-size: 14px;
+  }
+}
+
+.scrollTop {
+  position: fixed;
+  width: 100%;
+  bottom: 20px;
+  align-items: center;
+  height: 20px;
+  justify-content: center;
+  z-index: 1000;
+  height: 20px;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.5;
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
   }
 }

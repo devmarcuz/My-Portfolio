@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 
 const Header = () => {
   const [bar, setBar] = useState(false);
+
   return (
     <div className="header">
       <h2>

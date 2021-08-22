@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./components/Header";
 import MainHeader from "./components/MainHeader";
 import { BrowserRouter as Router } from "react-router-dom";
