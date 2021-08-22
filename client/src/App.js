@@ -6,12 +6,16 @@ import "./App.css";
 import Introduction from "./components/Introduction";
 import Info from "./components/Info";
 import Footer from "./components/Footer";
+import ScrollToTop from "react-scroll-up";
 
 function App() {
   return (
     <Router>
       <div className="container">
         <Header />
+        <ScrollToTop showUnder={160}>
+          <span>UP</span>
+        </ScrollToTop>
         <MainHeader />
         <Introduction />
         <Info />
