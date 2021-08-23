@@ -1,3 +1,3 @@
 # My-Portfolio
-Deploy am
+Deploy app
 https://resumedemoapp.herokuapp.com
